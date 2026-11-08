@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Gift Idea for Bence · Totes Toasties Slippers</title>
-<meta name="description" content="A small gift idea spotted in store: Totes Toasties men's slippers, navy with a cosy lining, £16.99, size EU 42–43. Filed under Bence Tanko-Bartalis.">
-<meta property="og:title" content="A Gift Idea for Bence">
-<meta property="og:description" content="Totes Toasties men's slippers · £16.99 · EU 42–43 · spotted at TK Maxx">
+<title>Gift file · ideas for Bence and Maria</title>
+<meta name="description" content="Two gift lists kept in one place: one for Bence Tanko-Bartalis, one for Maria. Pick a name, open the file, and buy the thing only if you want to.">
+<meta property="og:title" content="Gift file · Bence and Maria">
+<meta property="og:description" content="Two gift lists, one page. Pick whose list you are shopping for.">
 <meta property="og:image" content="assets/gift-1000.jpg">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧦</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>">
 <style>
   :root{
     --navy:#1b2a4a;
     --navy-soft:#2c3f66;
     --cream:#f8f2e6;
     --paper:#fffdf8;
-    --gold:#b9913f;
+    --gold:#9d7830;
+    --gold-ink:#7a5a1d;
     --ink:#1f2430;
-    --muted:#6a7180;
+    --muted:#5b6270;
     --line:rgba(27,42,74,.12);
     --shadow:0 18px 50px -24px rgba(27,42,74,.45);
   }
@@ -57,12 +58,9 @@
   }
 
   /* ---------- hero ---------- */
-  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
-  @media (max-width:820px){.hero{grid-template-columns:1fr;gap:24px}}
-
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
-    font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-ink);
     font-weight:600;margin:0 0 10px;
   }
   .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);display:inline-block}
@@ -72,82 +70,104 @@
     font-size:clamp(2.1rem,5.4vw,3.5rem);margin:0 0 14px;color:var(--navy);
   }
   h1 em{font-style:italic;color:var(--gold)}
-  .lede{font-size:1.06rem;color:#3d4658;margin:0 0 22px;max-width:44ch}
-  .byline{
-    display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;
-    font-size:.9rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;
-  }
-  .byline strong{color:var(--navy);font-weight:600}
+  .lede{font-size:1.06rem;color:#3d4658;margin:0 0 24px;max-width:46ch}
 
-  .photo{
-    position:relative;background:var(--paper);border-radius:18px;overflow:hidden;
-    box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.7);
-    transform:rotate(-.5deg);
-  }
-  .photo img{display:block;width:100%;height:auto}
-  .photo figcaption{
-    position:absolute;left:12px;bottom:12px;right:12px;
-    background:rgba(255,253,248,.92);backdrop-filter:blur(6px);
-    border-radius:10px;padding:8px 12px;font-size:.78rem;color:#4b5464;
-    border:1px solid rgba(27,42,74,.08);
-  }
-
-  /* ---------- price strip ---------- */
+  /* ---------- counters ---------- */
   .strip{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-    margin:34px 0 0;background:var(--line);border:1px solid var(--line);
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    margin:0 0 8px;background:var(--line);border:1px solid var(--line);
     border-radius:16px;overflow:hidden;
   }
   .strip div{background:rgba(255,253,248,.92);padding:16px 18px}
   .strip dt{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
-  .strip dd{margin:0;font-size:1.02rem;color:var(--navy);font-weight:600}
-  .strip .price dd{font-family:Georgia,serif;font-size:1.45rem;line-height:1.1}
-  @media (max-width:720px){.strip{grid-template-columns:1fr 1fr}}
+  .strip dd{margin:0;font-size:1rem;color:var(--navy);font-weight:600}
+  @media (max-width:720px){.strip{grid-template-columns:1fr}}
 
-  /* ---------- sections ---------- */
-  section{margin-top:44px}
-  h2{
+  /* ---------- filter (CSS only, no JS) ---------- */
+  input.sr{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+  .filter{
+    position:sticky;top:0;z-index:5;
+    display:flex;gap:8px;flex-wrap:wrap;align-items:center;
+    padding:14px 0 12px;margin:22px 0 0;
+    background:linear-gradient(to bottom,rgba(248,242,230,.97),rgba(248,242,230,.86));
+    backdrop-filter:blur(8px);
+  }
+  .filter .flabel{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+  .filter label{
+    font-size:.93rem;color:var(--navy);border:1px solid var(--line);
+    background:rgba(255,255,255,.72);
+    padding:8px 16px;border-radius:999px;cursor:pointer;user-select:none;
+    transition:background .15s,border-color .15s,color .15s;
+  }
+  .filter label:hover{border-color:rgba(27,42,74,.35)}
+  #f-all:checked ~ .filter label[for="f-all"],
+  #f-bence:checked ~ .filter label[for="f-bence"],
+  #f-maria:checked ~ .filter label[for="f-maria"]{
+    background:var(--navy);color:#f4e7c9;border-color:var(--navy);
+  }
+  #f-all:focus-visible ~ .filter label[for="f-all"],
+  #f-bence:focus-visible ~ .filter label[for="f-bence"],
+  #f-maria:focus-visible ~ .filter label[for="f-maria"]{
+    outline:2px solid var(--gold);outline-offset:3px;
+  }
+
+  /* ---------- lists ---------- */
+  .list{margin-top:26px}
+  .listhead{display:flex;align-items:baseline;gap:12px;margin:0 0 16px}
+  .listhead h2{
     font-family:Georgia,serif;font-weight:400;color:var(--navy);
-    font-size:1.5rem;margin:0 0 6px;letter-spacing:-.01em;
+    font-size:1.35rem;margin:0;letter-spacing:-.01em;
   }
-  .sub{color:var(--muted);font-size:.95rem;margin:0 0 20px}
+  .listhead .count{
+    font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+  }
 
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  @media (max-width:820px){.cards{grid-template-columns:1fr}}
-  .card{
-    background:var(--paper);border:1px solid var(--line);border-radius:16px;
-    padding:20px 20px 18px;box-shadow:0 10px 30px -26px rgba(27,42,74,.6);
-  }
-  .card h3{margin:0 0 6px;font-size:1rem;color:var(--navy);letter-spacing:-.005em}
-  .card p{margin:0;font-size:.93rem;color:#4b5464}
+  /* switching: the radios sit above both the filter and the lists */
+  #f-bence:checked ~ .lists .list[data-for="maria"],
+  #f-maria:checked ~ .lists .list[data-for="bence"]{display:none}
 
-  /* size check callout */
-  .check{
-    display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;
-    background:linear-gradient(135deg,var(--navy),#213356);color:#f2ecdf;
-    border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);
-  }
-  .check .mark{
-    width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
-    background:rgba(185,145,63,.18);border:1px solid rgba(216,182,117,.5);
-    color:#e8c98c;font-size:18px;
-  }
-  .check strong{color:#fff}
-  .check p{margin:0;font-size:.96rem;color:#dfd8c8}
-  .check .note{display:block;margin-top:2px;font-size:.85rem;color:#b9c0cf}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  @media (max-width:780px){.grid{grid-template-columns:1fr}}
 
-  /* buying list */
-  .buy{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-  .buy li{
-    display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:center;
-    background:rgba(255,253,248,.7);border:1px solid var(--line);border-radius:12px;
-    padding:12px 16px;font-size:.96rem;color:#3d4658;
+  .gift{
+    background:var(--paper);border:1px solid var(--line);border-radius:18px;
+    overflow:hidden;display:flex;flex-direction:column;
+    box-shadow:0 14px 40px -34px rgba(27,42,74,.9);
+    transition:transform .18s,box-shadow .18s;
   }
-  .buy b{color:var(--navy)}
-  .tick{
-    width:22px;height:22px;border-radius:7px;background:rgba(185,145,63,.14);
-    color:var(--gold);display:grid;place-items:center;font-size:13px;
+  .gift:hover{transform:translateY(-2px);box-shadow:0 20px 44px -30px rgba(27,42,74,.75)}
+  .gift .media{aspect-ratio:16/10;background:#f6efe1;overflow:hidden}
+  .gift .media img{display:block;width:100%;height:100%;object-fit:cover}
+  .gift .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .who{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);font-weight:600}
+  .gift h3{
+    font-family:Georgia,serif;font-weight:400;font-size:1.22rem;margin:0;
+    color:var(--navy);letter-spacing:-.01em;line-height:1.25;
   }
+  .gift p{margin:0;font-size:.94rem;color:#4b5464}
+  .gift .meta{font-size:.83rem;color:var(--muted);letter-spacing:.02em}
+  .gift .go{
+    margin-top:auto;padding-top:12px;align-self:flex-start;
+    font-size:.93rem;color:var(--navy);text-decoration:none;
+    border-bottom:1px solid rgba(27,42,74,.3);padding-bottom:2px;
+  }
+  .gift .go:hover{border-bottom-color:var(--navy)}
+
+  @media (max-width:600px){
+    .topbar{flex-wrap:wrap;gap:10px}
+    .tag{white-space:normal;font-size:11px}
+  }
+
+  .empty{
+    border:1px dashed rgba(27,42,74,.22);border-radius:16px;
+    padding:30px 28px;background:rgba(255,253,248,.55);
+  }
+  .empty p{max-width:64ch}
+  .empty h3{
+    font-family:Georgia,serif;font-weight:400;font-size:1.1rem;
+    color:var(--navy);margin:0 0 6px;
+  }
+  .empty p{margin:0;font-size:.94rem;color:#4b5464}
 
   footer{
     margin-top:52px;padding-top:22px;border-top:1px solid var(--line);
@@ -162,112 +182,108 @@
 <div class="wrap">
 
   <div class="topbar">
-    <a class="brand" href="#top">
+    <a class="brand" href="index.html">
       <span class="mono">BT</span>
       <span>Gift file</span>
     </a>
-    <span class="tag">Potential gift · 01</span>
+    <span class="tag">Two lists · updated 8 November 2026</span>
   </div>
 
   <main id="top">
-    <div class="hero">
-      <div>
-        <p class="eyebrow">Spotted in store</p>
-        <h1>A pair of <em>very cosy</em> slippers.</h1>
-        <p class="lede">
-          Totes Toasties men's moccasin slippers, navy with a thick cream fleece lining and a
-          little drawstring at the front. Cheap, warm, and easy to wrap, the sort of gift that
-          actually gets used all winter.
-        </p>
-        <div class="byline">
-          <span>Filed under <strong>Bence Tanko-Bartalis</strong></span>
-          <span>·</span>
-          <span>Size <strong>EU 43</strong></span>
-          <span>·</span>
-          <span>Saved <strong>8 November 2026</strong></span>
-        </div>
-      </div>
-
-      <figure class="photo">
-        <img src="assets/gift-1800.jpg"
-             srcset="assets/gift-600.jpg 600w, assets/gift-1000.jpg 1000w, assets/gift-1800.jpg 1800w"
-             sizes="(max-width: 820px) 92vw, 45vw"
-             width="1800" height="1350"
-             alt="An open box of navy Totes Toasties men's slippers with cream fleece lining, on a shop shelf">
-        <figcaption>Seen on the shelf at TK Maxx. Honest, unglamorous, and exactly what it looks like.</figcaption>
-      </figure>
-    </div>
+    <p class="eyebrow">Hints, not demands</p>
+    <h1>Who are you <em>buying for?</em></h1>
+    <p class="lede">
+      Two lists, kept in the same place: one for Bence, one for Maria. Pick a name and the page
+      narrows to that list. Each entry says where the thing was seen, what it costs, and the catch,
+      so nobody has to guess.
+    </p>
 
     <dl class="strip">
-      <div class="price">
-        <dt>Price seen</dt>
-        <dd>£16.99</dd>
+      <div>
+        <dt>On the lists</dt>
+        <dd>2 ideas</dd>
       </div>
       <div>
-        <dt>Size on box</dt>
-        <dd>M · UK 8–9</dd>
+        <dt>Names</dt>
+        <dd>Bence · Maria</dd>
       </div>
       <div>
-        <dt>EU equivalent</dt>
-        <dd>42–43</dd>
-      </div>
-      <div>
-        <dt>Colourway</dt>
-        <dd>Navy / cream</dd>
+        <dt>Last checked</dt>
+        <dd>8 November 2026</dd>
       </div>
     </dl>
 
-    <section>
-      <h2>Why it works</h2>
-      <p class="sub">Three reasons this made the list, and stayed on it.</p>
-      <div class="cards">
-        <div class="card">
-          <h3>It is the right size</h3>
-          <p>The box is a Medium: UK 8–9, EU 42–43. A EU 43 lands inside the range rather than at the edge of it, so no guesswork.</p>
-        </div>
-        <div class="card">
-          <h3>Warm, not fussy</h3>
-          <p>Fleece lining, durable sole, moccasin stitching. No batteries, no app, nothing to charge. It just keeps feet warm on a cold Oxford morning.</p>
-        </div>
-        <div class="card">
-          <h3>Sensible price</h3>
-          <p>£16.99 is stocking-filler money for something that gets worn daily from November to March. Low risk if it is not a hit.</p>
-        </div>
-      </div>
-    </section>
+    <input class="sr" type="radio" name="who" id="f-all" checked>
+    <input class="sr" type="radio" name="who" id="f-bence">
+    <input class="sr" type="radio" name="who" id="f-maria">
 
-    <section>
-      <div class="check">
-        <span class="mark" aria-hidden="true">✓</span>
-        <p>
-          <strong>Size check: EU 43 fits the Medium box.</strong>
-          <span class="note">If only a Large (EU 44–45) is left on the shelf, it will be roomy rather than snug. Fine for slippers, less ideal than the Medium.</span>
-        </p>
-      </div>
-    </section>
+    <div class="filter" role="group" aria-label="Choose whose list to show">
+      <span class="flabel">Show</span>
+      <label for="f-all">All gifts</label>
+      <label for="f-bence">For Bence</label>
+      <label for="f-maria">For Maria</label>
+    </div>
 
-    <section>
-      <h2>If you are buying it</h2>
-      <p class="sub">Everything needed to walk in and come out with the right pair.</p>
-      <ul class="buy">
-        <li>
-          <span class="tick" aria-hidden="true">1</span>
-          <span>Ask for the <b>Men's Slippers</b> by <b>Totes Toasties</b>, the navy box with gold zig-zags and snowflakes.</span>
-        </li>
-        <li>
-          <span class="tick" aria-hidden="true">2</span>
-          <span>Pick the box marked <b>M / UK 8–9 / EU 42–43</b>. That is the one that fits.</span>
-        </li>
-        <li>
-          <span class="tick" aria-hidden="true">3</span>
-          <span>Expect around <b>£16.99</b>. Seen at TK Maxx (TJX UK); stock rotates, so ring ahead if it is a trek.</span>
-        </li>
-        <li>
-          <span class="tick" aria-hidden="true">4</span>
-          <span>Keep the receipt. Slipper sizes are forgiving, but a swap should stay easy.</span>
-        </li>
-      </ul>
-    </section>
+    <div class="lists">
+      <section class="list" data-for="bence" aria-labelledby="h-bence">
+        <div class="listhead">
+          <h2 id="h-bence">For Bence</h2>
+          <span class="count">2 ideas</span>
+        </div>
+
+        <div class="grid">
+          <article class="gift">
+            <div class="media">
+              <img src="assets/gift-600.jpg" width="600" height="450"
+                   alt="An open box of navy Totes Toasties men's slippers with a cream fleece lining, on a shop shelf">
+            </div>
+            <div class="body">
+              <span class="who">For Bence</span>
+              <h3>Totes Toasties slippers</h3>
+              <p>
+                Navy moccasins with a cream fleece lining. The Medium box is UK 8–9, EU 42–43,
+                which is the size that fits. Seen at TK Maxx.
+              </p>
+              <span class="meta">£16.99 · spotted 8 November 2026</span>
+              <a class="go" href="slippers.html">Open the file →</a>
+            </div>
+          </article>
+
+          <article class="gift">
+            <div class="media">
+              <img src="assets/hairkit.svg" width="400" height="225"
+                   alt="Line drawing of haircutting scissors resting over a comb">
+            </div>
+            <div class="body">
+              <span class="who">For Bence</span>
+              <h3>Wahl Colour Pro haircutting kit</h3>
+              <p>
+                Cordless clipper with colour coded guards, scissors and a barber comb. The sort of
+                kit that turns a haircut into twenty minutes at home instead of an appointment.
+              </p>
+              <span class="meta">£36.99 · checked at wahl.co.uk</span>
+              <a class="go" href="haircut-kit.html">Open the file →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="list" data-for="maria" aria-labelledby="h-maria">
+        <div class="listhead">
+          <h2 id="h-maria">For Maria</h2>
+          <span class="count">Nothing yet</span>
+        </div>
+
+        <div class="empty">
+          <h3>This list is empty, and that is the honest state of it.</h3>
+          <p>
+            No ideas have been filed for Maria yet. When one turns up it lands here in the same
+            shape as the entries above: what it is, what it costs, and where it was seen.
+            If you have a suggestion, tell Percy and it gets written up.
+          </p>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
