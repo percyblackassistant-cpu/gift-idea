@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Line drawing of a backpack shrinking into a small packed pouch">
+  <rect width="400" height="225" fill="#f6efe1"/>
+  <circle cx="150" cy="112" r="84" fill="#b9913f" opacity=".07"/>
+
+  <!-- backpack -->
+  <g fill="none" stroke="#1b2a4a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="78" y="56" width="112" height="128" rx="20"/>
+    <path d="M96 58v-6a14 14 0 0 1 14-14h48a14 14 0 0 1 14 14v6"/>
+    <path d="M78 96h112"/>
+    <path d="M96 96v-4"/>
+    <path d="M172 96v-4"/>
+    <circle cx="134" cy="96" r="4" fill="#1b2a4a" stroke="none"/>
+    <path d="M98 124h20a8 8 0 0 1 8 8v34"/>
+    <path d="M170 124h-20a8 8 0 0 0-8 8v34"/>
+  </g>
+
+  <!-- packed pouch -->
+  <g fill="none" stroke="#1b2a4a" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="268" y="98" width="66" height="62" rx="14"/>
+    <path d="M280 118h42"/>
+    <path d="M280 134h42"/>
+  </g>
+
+  <!-- shrinking arrows -->
+  <g stroke="#b9913f" stroke-width="3" stroke-linecap="round" fill="none" stroke-dasharray="7 7">
+    <path d="M204 100h48"/>
+    <path d="M204 132h48"/>
+  </g>
+  <path d="M252 100l-8 -5v10z" fill="#b9913f"/>
+</svg>

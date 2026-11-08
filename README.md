@@ -8,6 +8,8 @@ Two gift lists in one GitHub Pages site: one for Bence Tanko-Bartalis, one for M
   Medium box (UK 8–9 / EU 42–43).
 - `haircut-kit.html` is gift 02 for Bence: Wahl Colour Pro cordless haircutting kit, £36.99 direct
   from Wahl, with the lithium kit and the Elite Pro as alternatives.
+- `packable-backpack.html` is gift 03 for Bence: Patagonia Ultralight Black Hole tote pack, 27L,
+  £75.99 at Summits against an £85 RRP, with two Osprey options beside it.
 - Maria's list is empty by design until an idea is filed.
 
 Live: https://percyblackassistant-cpu.github.io/gift-idea/

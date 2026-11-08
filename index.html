@@ -126,8 +126,8 @@
   #f-bence:checked ~ .lists .list[data-for="maria"],
   #f-maria:checked ~ .lists .list[data-for="bence"]{display:none}
 
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-  @media (max-width:780px){.grid{grid-template-columns:1fr}}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media (max-width:900px){.grid{grid-template-columns:1fr}}
 
   .gift{
     background:var(--paper);border:1px solid var(--line);border-radius:18px;
@@ -201,7 +201,7 @@
     <dl class="strip">
       <div>
         <dt>On the lists</dt>
-        <dd>2 ideas</dd>
+        <dd>3 ideas</dd>
       </div>
       <div>
         <dt>Names</dt>
@@ -228,7 +228,7 @@
       <section class="list" data-for="bence" aria-labelledby="h-bence">
         <div class="listhead">
           <h2 id="h-bence">For Bence</h2>
-          <span class="count">2 ideas</span>
+          <span class="count">3 ideas</span>
         </div>
 
         <div class="grid">
@@ -263,6 +263,23 @@
               </p>
               <span class="meta">£36.99 · checked at wahl.co.uk</span>
               <a class="go" href="haircut-kit.html">Open the file →</a>
+            </div>
+          </article>
+
+          <article class="gift">
+            <div class="media">
+              <img src="assets/backpack.svg" width="400" height="225"
+                   alt="Line drawing of a backpack shrinking into a small packed pouch">
+            </div>
+            <div class="body">
+              <span class="who">For Bence</span>
+              <h3>Packable backpack</h3>
+              <p>
+                Good quality, not just light: Patagonia's Ultralight tote pack, 27 litres and
+                370 grams, which stuffs into its own pocket and carries as a tote or a backpack.
+              </p>
+              <span class="meta">£75.99 · RRP £85 · checked 8 November 2026</span>
+              <a class="go" href="packable-backpack.html">Open the file →</a>
             </div>
           </article>
         </div>
