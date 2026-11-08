@@ -6,11 +6,11 @@ Two gift lists in one GitHub Pages site: one for Bence Tanko-Bartalis, one for M
   or only Maria's. No JavaScript, no external requests.
 - `slippers.html` is gift 01 for Bence: Totes Toasties men's moccasins, navy, £16.99 at TK Maxx,
   Medium box (UK 8-9 / EU 42-43). Every fact on it comes from the photo Bence took in store.
-- `haircut-kit.html` is gift 02: the brief only ("a haircutting kit so I can cut my own hair").
-  No brand, model, price or spec has been given, so the page prints none and lists the open
-  questions instead.
-- `packable-backpack.html` is gift 03: the brief only ("good quality packable backpack").
-  Same rule, same shape.
+- `hair-trimmer.html` is gift 02: cordless trimmer with adjustable parts, for the sides of his hair,
+  not a full kit. Brief only, no brand, model or price. `haircut-kit.html` is a meta-refresh
+  forwarder to it, kept so the old link does not die.
+- `packable-backpack.html` is gift 03: spare bag, about 20 litres, rugged enough for heavy shopping,
+  Osprey preferred but not required. Brief only, no model or price.
 - Maria's list is empty by design until an idea is filed.
 
 Live: https://percyblackassistant-cpu.github.io/gift-idea/
